@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# UNDERGROWTH Denver
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app creates a place for Denver dance artists to connect via classes, festivals, professional development, resource sharing, and ongoing meetings. 
 
-## Available Scripts
+I created this App because it waters a particular malnourishment of the Denver Dance Community. By pooling in dance resources across the Denver-Metro area, artists can depend on a more robust and central source of community information and offerings. 
 
-In the project directory, you can run:
+More Specifically, this is a ✨REVAMP✨ of --> https://undergrowthdenver.com/ that adds a listings page for resources that can be filtered & added to, as well as a Login, and Community Calendar. 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Stories / As a user I can...
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+View, Filer by type, and Add Dance Resources to both a Listings page and Community Calendar. I can read about past meetings and the mission of UNDERGROWTH. I can Log in / Log out. 
 
-### `npm test`
+## DB Diagram 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<img width="1288" alt="Screen Shot 2022-11-01 at 4 30 49 PM" src="https://user-images.githubusercontent.com/109185681/200910728-cb6c91e7-ce42-4653-8da9-003810823f69.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Whimsical // WireFrame
 
-### `npm run eject`
+<img width="765" alt="Screen Shot 2022-11-09 at 11 21 41 AM" src="https://user-images.githubusercontent.com/109185681/200910763-6a33a519-7fdf-4dfd-960b-668d0b37e7c4.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img width="624" alt="Screen Shot 2022-11-09 at 11 22 09 AM" src="https://user-images.githubusercontent.com/109185681/200910772-f16a37ef-5da9-4082-88c9-e6d0bf185ad5.png">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="405" alt="Screen Shot 2022-11-09 at 11 22 22 AM" src="https://user-images.githubusercontent.com/109185681/200910791-cc8855f8-33b4-482f-a36a-17e82679f4cd.png">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
