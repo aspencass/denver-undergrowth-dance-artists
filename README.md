@@ -11,7 +11,6 @@ More Specifically, this is a ✨REVAMP✨ of --> https://undergrowthdenver.com/ 
 
 View, Filer by type, and Add Dance Resources to both a Listings page and Community Calendar. I can read about past meetings and the mission of UNDERGROWTH. I can Log in / Log out. 
 
-```
 ## DB Diagram 
 
 
