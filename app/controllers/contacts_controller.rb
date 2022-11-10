@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+    skip_before_action :authorized_user, only: [:index, :show, :create]
 
     def index 
         render json: Contact.all, status: :ok
