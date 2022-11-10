@@ -2,11 +2,19 @@ import { useState } from 'react'
 import {Link} from 'react-router-dom'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
-function Navigation({ currentUser }) {
+function Navigation({ updateUser }) {
   const [loginMenu, setLoginMenu] = useState(false)
 
   const handleLogOut = () => {
     // DELETE `/logout`
+    fetch('/logout', {
+      method: 'DELETE'
+    })
+    .then(res => {
+      if(res.ok) {
+        updateUser(false)
+      }
+    })
   }
   
     return (
@@ -23,8 +31,8 @@ function Navigation({ currentUser }) {
             <li><Link to='/users/new'>Sign Up</Link></li>
             <li><Link to='/login'>Login</Link></li>
             {/* <li><Link to='/resources/new'>New Resource</Link></li> */}
-            {/* <li><Link to='/users/1'>User Page</Link></li> */}
-            {/* <li><Link to='/'> Home</Link></li> */}
+            <li><Link to='/users/1'>User Page</Link></li>
+            <li><Link to='/'> Home</Link></li>
            </ul>
            }
          </div>

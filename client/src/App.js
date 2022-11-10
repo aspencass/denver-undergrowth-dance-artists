@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Navigation from './components/Navigation'
 import SignUp from './components/SignUp'
 import Login from './components/Login'
+import UserPage from './components/UserPage'
 
 
 function App() {
@@ -15,26 +16,47 @@ function App() {
   const [errors, setErrors] = useState(false)
 
 
-    // GET '/resources' 
-    useEffect(()=> {
-      fetch('/resources')
-      .then(res => res.json())
-      .then(resourcesArray => setResources(resourcesArray))
+
+    useEffect(() => {
+      fetch('/authorized_user')
+      .then(res => {
+        if(res.ok){
+          res.json().then(user => {
+            updateUser(user)
+            fetchResources()
+          })
+        }
+      })
     }, [])
+
+    // GET '/resources' 
+    const fetchResources = () => {
+      fetch('/resources')
+      .then(res => {
+      if(res.ok){
+        res.json().then(setResources)
+      } else {
+        res.json().then(data => setErrors(data.error))
+      }
+    })
+  }
+
 
 
   // once i make a form for deleting a resource from the resources page
   // const deleteResource = (id) => setResources(current => current.filter(r => r.id !== id)) 
 
-  
+  const updateUser = (user) => setCurrentUser(user)
   if(errors) return <h1>{errors}</h1>
 
 
   return (
     <>
     <BrowserRouter>
-    {/* {!currentUser? <Login error={'please login'} updateUser={updateUser}/> :  */} 
-    <Navigation currentUser={currentUser}/>
+    <Navigation updateUser={updateUser}/>
+
+    {!currentUser? <Login error={'please login'} updateUser={updateUser}/> :  
+
       <Switch>
 
       <Route path='/users/new'>
@@ -46,7 +68,7 @@ function App() {
       </Route>
 
       <Route path='/login'>
-        <Login currentUser={currentUser}/>
+        <Login updateUser={updateUser}/>
       </Route>
 
     
@@ -54,10 +76,13 @@ function App() {
         <Home  />
       </Route>
 
-     
-      
+      <Route path='/users/:id'>
+        <UserPage updateUser={updateUser}/>
+      </Route>
       </Switch>
-      </BrowserRouter>
+      }
+    </BrowserRouter>
+
     </>
   )
 }

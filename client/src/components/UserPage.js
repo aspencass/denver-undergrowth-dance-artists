@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
+import Home from './Home';
+
 function UserPage(){
     const [user, setUser] = useState()
     const [loading, setLoading] = useState(true)
@@ -17,7 +19,7 @@ function UserPage(){
                     setLoading(false)
                 })
             }else {
-                res.json().then(data => setErrors(data.error))
+                res.json().then(data => setErrors(data.errors))
             }
         })
        
@@ -27,16 +29,7 @@ function UserPage(){
     if(errors) return <h1>{errors}</h1>
     return (
         <div>
-            <h1>{user.name}</h1>
-            <h3>Tickets</h3>
-            <ul>
-                {user.tickets.map(ticket => (
-                <li>
-                    <h2>{ticket.production.title}</h2>
-                    <p>Price: {ticket.price}</p>
-                </li>
-                ))}
-            </ul>
+            <Home /> 
         </div>
     )
 }
