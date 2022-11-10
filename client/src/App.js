@@ -1,5 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import {useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
+
+
 
 
 // component imports
@@ -8,6 +10,11 @@ import Navigation from './components/Navigation'
 import SignUp from './components/SignUp'
 import Login from './components/Login'
 import UserPage from './components/UserPage'
+import NavBar from './components/NavBar'
+// import ResourcePage from "./components/ResourcePage"
+// import DetailForResourceID from './components/DetailForResourceID'
+// import ResourceForm from './components/ResourceForm'
+
 
 
 function App() {
@@ -41,7 +48,7 @@ function App() {
     })
   }
 
-
+  console.log(currentUser)
 
   // once i make a form for deleting a resource from the resources page
   // const deleteResource = (id) => setResources(current => current.filter(r => r.id !== id)) 
@@ -52,8 +59,12 @@ function App() {
 
   return (
     <>
+    {/* <div className="nav">
+              <NavBar /> 
+    </div> */}
     <BrowserRouter>
-    <Navigation updateUser={updateUser}/>
+
+    <Navigation updateUser={updateUser} currentUser={currentUser}/>
 
     {!currentUser? <Login error={'please login'} updateUser={updateUser}/> :  
 
