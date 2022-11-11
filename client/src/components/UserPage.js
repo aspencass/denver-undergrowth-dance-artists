@@ -29,6 +29,7 @@ function UserPage(){
     if(errors) return <h1>{errors}</h1>
     return (
         <div>
+            <h1>Hello, {user.username}</h1>
             <Home /> 
         </div>
     )
