@@ -25,9 +25,12 @@ code {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: url('./assets/nude.png');
 }
-
+.grid-child3 {
+  margin-top: 10px;
+}
 .grid-container2 {
   display: grid;
   grid-auto-flow: column;
