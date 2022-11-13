@@ -34,7 +34,7 @@ function Navigation({ updateUser, currentUser }) {
           </Navbar.Brand>
         </Navbar>
 
-        <div className="grid-child3 font-bold text-xl text-center ">
+        <div className="grid-child3 text-base text-center ">
           <div>
             {currentUser && <button onClick={handleLogOut}>Log Out</button>}
 
@@ -56,9 +56,9 @@ function Navigation({ updateUser, currentUser }) {
                 <li onClick={() => setLoginMenu(!loginMenu)}>
                   <Link to="/resources">Resources</Link>
                 </li>
-                <li onClick={() => setLoginMenu(!loginMenu)}>
+                {/* <li onClick={() => setLoginMenu(!loginMenu)}>
                   <Link to="/">Community Calendar</Link>
-                </li>
+                </li> */}
                 {!currentUser && (
                   <>
                     <li onClick={() => setLoginMenu(!loginMenu)}>

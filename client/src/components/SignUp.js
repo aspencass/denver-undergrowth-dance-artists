@@ -40,7 +40,8 @@ function SignUp() {
   };
   return (
     <>
-      <form className="flex flex-col gap-4 onSubmit={onSubmit}">
+    <div className="bg-[url('./assets/nude.png')] bg-cover h-screen w-screen">
+      <form className="onSubmit={onSubmit} font-bold gap-4 flex flex-col items-center mt-0">
         <div>
           <div className="mb-2 block">
             <Label htmlFor="username1" value="Your username" />
@@ -68,9 +69,15 @@ function SignUp() {
           <Checkbox id="remember" />
           <Label htmlFor="remember">Remember me</Label>
         </div>
-        <Button type="submit">Sign up!</Button>
+        <Button
+            type="submit"
+            class="bg-[#fffc52] text-black pr-6 pl-6 pt-4 pb-4 text-xl"
+          >
+            Sign up! 
+          </Button>
       </form>
       {errors ? errors.map((e) => <div>{e[0] + ": " + e[1]}</div>) : null}
+      </div>
     </>
   );
 }

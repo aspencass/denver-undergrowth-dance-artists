@@ -1,5 +1,5 @@
 class UserResourcesController < ApplicationController
-    skip_before_action :authorized_user, only: [:index, :show ]
+   
 
     def index
         userResource = UserResource.all 

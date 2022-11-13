@@ -27,8 +27,8 @@ export default function Home({ updateUser }) {
         </div> */}
 
       {/* green block  */}
-      <div class="bg-[url('./assets/green.png')] bg-cover flex items-center">
-        <div class="text-4xl text-white font-bold pr-52 pl-52 pt-10 pb-10 ">
+      <div className="bg-[url('./assets/green.png')] bg-cover flex items-center">
+        <div className="text-4xl text-white font-bold pr-52 pl-52 pt-10 pb-10 ">
           <p>
             {" "}
             UNDERGROWTH started with a series of town halls to gather the Denver
@@ -41,9 +41,9 @@ export default function Home({ updateUser }) {
       </div>
 
       {/* yellow block  */}
-      <div class="bg-[#fffc52] bg-cover flex items-center">
-        <div class="text-black pl-20 pr-20 pt-16 pb-16">
-          <div class="text-4xl text-center font-extrabold leading-normal">
+      <div className="bg-[#fffc52] bg-cover flex items-center">
+        <div className="text-black pl-20 pr-20 pt-16 pb-16">
+          <div className="text-4xl text-center font-extrabold leading-normal">
             <p>
               The front-range dance and performing arts community is at a
               critical point in its timeline. Dance artists are struggling for
@@ -51,7 +51,7 @@ export default function Home({ updateUser }) {
               <br />
             </p>
           </div>
-          <div class="font-normal text-center text-xl leading-normal pt-6">
+          <div className="font-normal text-center text-xl leading-normal pt-6">
             <p>
               The undergrowth is the seedlings, fighters, and survivors: those
               who found nourishment out of the necessity of defying the
@@ -61,7 +61,7 @@ export default function Home({ updateUser }) {
             </p>
           </div>
 
-          <div class="pt-10 flex flex-col items-center">
+          <div className="pt-10 flex flex-col items-center">
             <Button
               onClick={onOpenLetterClick}
               class="bg-black text-[#fffc52] pr-6 pl-6 pt-4 pb-4 text-xl"
@@ -74,12 +74,12 @@ export default function Home({ updateUser }) {
 
       {/* meeting section  */}
 
-      <div class="bg-[url('./assets/nude.png')] bg-cover p-20">
+      <div className="bg-[url('./assets/nude.png')] bg-cover p-20">
         {/* identify */}
         <div className="grid-container2">
           <div className="grid-child3">
-            <div class="text-8xl font-extrabold w-50">IDENTIFY</div>
-            <div class="pt-6">
+            <div className="text-8xl font-extrabold w-50">IDENTIFY</div>
+            <div className="pt-6">
               An open forum discussion where Front Range dance artists will
               congregate to discuss and share their experiences and express
               opportunities for growth that exist within the local dance
@@ -88,8 +88,8 @@ export default function Home({ updateUser }) {
             </div>
           </div>
 
-          <div class="grid-child4">
-            <div class="text-4xl text-center font-extrabold italic leading-relaxed pt-10">
+          <div className="grid-child4">
+            <div className="text-4xl text-center font-extrabold italic leading-relaxed pt-10">
               MAY 1, 2022
               <br />5 PM
               <br />
@@ -100,8 +100,8 @@ export default function Home({ updateUser }) {
         {/* specify */}
         <div className="grid-container3">
           <div className="grid-child5">
-            <div class="text-8xl font-extrabold w-50 pt-20">SPECIFY</div>
-            <div class="pt-6">
+            <div className="text-8xl font-extrabold w-50 pt-20">SPECIFY</div>
+            <div className="pt-6">
               Another public town hall where participants will break off into
               small group discussions led by leaders in the dance community.
               Each small group discussion will address 1-3 of the needs
@@ -111,8 +111,8 @@ export default function Home({ updateUser }) {
               to the group.
             </div>
           </div>
-          <div class="grid-child6">
-            <div class="text-4xl text-center font-extrabold italic leading-relaxed pt-32">
+          <div className="grid-child6">
+            <div className="text-4xl text-center font-extrabold italic leading-relaxed pt-32">
               JUNE 13, 2022
               <br />5 PM
               <br />
@@ -123,8 +123,8 @@ export default function Home({ updateUser }) {
         {/* take action */}
         <div className="grid-container4">
           <div className="grid-child7">
-            <div class="text-8xl font-extrabold w-50 pt-20">TAKE ACTION</div>
-            <div class="pt-6">
+            <div className="text-8xl font-extrabold w-50 pt-20">TAKE ACTION</div>
+            <div className="pt-6">
               An open forum discussion where Front Range dance artists will
               congregate to discuss and share their experiences and express
               opportunities for growth that exist within the local dance
@@ -133,8 +133,8 @@ export default function Home({ updateUser }) {
             </div>
           </div>
 
-          <div class="grid-child8">
-            <div class="text-4xl text-center font-extrabold italic leading-relaxed pt-32">
+          <div className="grid-child8">
+            <div className="text-4xl text-center font-extrabold italic leading-relaxed pt-32">
               SEPTEMBER 23, 2022
               <br />
               5:30 PM
@@ -145,14 +145,14 @@ export default function Home({ updateUser }) {
         </div>
       </div>
       {/* contact us  */}
-      <div class="bg-[url('./assets/green.png')] bg-cover flex items-center justify-center">
-        <div class="text-2xl text-white font-bold pr-10 pl-10 pt-20 pb-10 ">
+      <div className="bg-[url('./assets/green.png')] bg-cover flex items-center justify-center">
+        <div className="text-2xl text-white font-bold pr-10 pl-10 pt-20 pb-10 ">
           <p>
             {" "}
             Have thoughts, questions, or suggestions? Reach out! We are a
             continuous work in progress…
           </p>
-          <div class="pt-10 flex flex-col items-center">
+          <div className="pt-10 flex flex-col items-center">
             <Button
               onClick={onContactClick}
               class="bg-[#fffc52] text-black pr-6 pl-6 pt-4 pb-4 text-xl"
