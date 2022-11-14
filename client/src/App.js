@@ -8,7 +8,7 @@ import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import ResourcePage from "./components/ResourcePage"
 import CardDetails from './components/CardDetails'
-// import ResourceForm from './components/ResourceForm'
+import ResourceForm from './components/ResourceForm'
 // import UserPage from "./components/UserPage";
 
 function App() {
@@ -43,7 +43,9 @@ function App() {
     .then(resourcesArray => setResources(resourcesArray))
   }, [])
 
-  
+  const addResource = (resource) => setResources(current => [...current,resource])
+  const addContact = () => setResources(current => [...current,resources.contact])
+  const addCategory = () => setResources(current => [...current,resources.category])
 
   console.log(currentUser);
 
@@ -65,6 +67,10 @@ function App() {
           <Route path="/users/new">
             <SignUp />
           </Route>
+
+        <Route  path='/resources/new'>
+          <ResourceForm addResource={addResource} addContact={addContact} addCategory={addCategory}/>
+        </Route>
 
           <Route path="/users/:id">
             <Home />

@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-    skip_before_action :authorized_user, only: [:index, :show]
+    skip_before_action :authorized_user, only: [:index, :show, :create]
 
     def index 
         render json: Resource.all, status: :ok
