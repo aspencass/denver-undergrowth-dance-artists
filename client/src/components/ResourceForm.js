@@ -120,12 +120,13 @@ function ResourceForm({ addResource, addContact, addCategory }) {
   }
 
   return (
-    <div className="gap-6 flex flex-col items-center bg-[url('./assets/nude.png')] bg-cover h-screen w-screen">
+    <div className="gap-6 flex flex-col items-center bg-[url('./assets/nude.png')] bg-cover h-max w-screen">
       {/* {errors ? errors.map((e) => <div>{e}</div>) : null} */}
+      <h1 class="text-center text-6xl font-extrabold w-50 tracking-wide">Add your class, performance, workshop, funding opportunity, audition, rehearsal space, <br />Denver Dance Resource here!</h1>
 
       {/* category submit form  */}
       <form onCategorySubmit={onCategorySubmit}>
-        <div className="font-bold gap-10 flex flex-row items-center">
+        <div className="font-bold gap-10 flex flex-row items-center mt-6">
           <div className="mb-2 block">
             <Label htmlFor="name" value="Resource Type:" />
           </div>
@@ -140,7 +141,7 @@ function ResourceForm({ addResource, addContact, addCategory }) {
 
       {/* resource submit form  */}
       <form onSubmit={onResourceSubmit}>
-        <div className="font-bold gap-10 flex flex-row items-center">
+        <div className="font-bold gap-10 flex flex-row items-center mt-6">
           <div className="mb-2 block">
             <Label htmlFor="title" value="Resource Heading:" />
           </div>
@@ -244,73 +245,73 @@ function ResourceForm({ addResource, addContact, addCategory }) {
       {/* contact submit form  */}
       <form onSubmit={onContactSubmit}>
         <div class="gap-6 flex flex-col items-center bg-[url('./assets/nude.png')] bg-cover h-screen w-screen">
-        <h1 class="text-2xl ">Contact Information:</h1>
-        <div className="font-bold gap-10 flex flex-row items-center mt-6">
-          <div className="mb-2 block">
-            <Label htmlFor="name" value="Name:" />
+          <h1 class="text-6xl font-extrabold w-50">Contact Information:</h1>
+          <div className="font-bold gap-10 flex flex-row items-center mt-6">
+            <div className="mb-2 block">
+              <Label htmlFor="name" value="Name:" />
+            </div>
+            <TextInput
+              type="text"
+              name="name"
+              value={contactFormData.name}
+              onChange={handleContactChange}
+            />
           </div>
-          <TextInput
-            type="text"
-            name="name"
-            value={contactFormData.name}
-            onChange={handleContactChange}
-          />
-        </div>
 
-        <div className="font-bold gap-10 flex flex-row items-center mt-6">
-          <div className="mb-2 block">
-            <Label htmlFor="email" value="Email:" />
+          <div className="font-bold gap-10 flex flex-row items-center mt-6">
+            <div className="mb-2 block">
+              <Label htmlFor="email" value="Email:" />
+            </div>
+            <TextInput
+              type="text"
+              name="email"
+              value={contactFormData.email}
+              onChange={handleContactChange}
+            />
           </div>
-          <TextInput
-            type="text"
-            name="email"
-            value={contactFormData.email}
-            onChange={handleContactChange}
-          />
-        </div>
 
-        <div className="font-bold gap-10 flex flex-row items-center mt-6">
-          <div className="mb-2 block">
-            <Label htmlFor="phone" value="Phone:" />
+          <div className="font-bold gap-10 flex flex-row items-center mt-6">
+            <div className="mb-2 block">
+              <Label htmlFor="phone" value="Phone:" />
+            </div>
+            <TextInput
+              type="number"
+              name="phone"
+              value={contactFormData.phone}
+              onChange={handleContactChange}
+            />
           </div>
-          <TextInput
-            type="number"
-            name="phone"
-            value={contactFormData.phone}
-            onChange={handleContactChange}
-          />
-        </div>
 
-        <div className="font-bold gap-10 flex flex-row items-center mt-6">
-          <div className="mb-2 block">
-            <Label htmlFor="website" value="Website:" />
+          <div className="font-bold gap-10 flex flex-row items-center mt-6">
+            <div className="mb-2 block">
+              <Label htmlFor="website" value="Website:" />
+            </div>
+            <TextInput
+              type="text"
+              name="website"
+              value={contactFormData.website}
+              onChange={handleContactChange}
+            />
           </div>
-          <TextInput
-            type="text"
-            name="website"
-            value={contactFormData.website}
-            onChange={handleContactChange}
-          />
-        </div>
 
-        <div className="font-bold gap-10 flex flex-row items-center mt-6">
-          <div className="mb-2 block">
-            <Label htmlFor="social" value="Social:" />
+          <div className="font-bold gap-10 flex flex-row items-center mt-6">
+            <div className="mb-2 block">
+              <Label htmlFor="social" value="Social:" />
+            </div>
+            <TextInput
+              type="text"
+              name="social"
+              value={contactFormData.social}
+              onChange={handleContactChange}
+            />
           </div>
-          <TextInput
-            type="text"
-            name="social"
-            value={contactFormData.social}
-            onChange={handleContactChange}
-          />
-        </div>
 
-        <Button
-          type="submit"
-          class="bg-[#fffc52] text-black pr-6 pl-6 pt-4 pb-4 text-xl mt-6"
-        >
-          Add Resource
-        </Button>
+          <Button
+            type="submit"
+            class="bg-[#fffc52] text-black pr-6 pl-6 pt-4 pb-4 text-xl mt-6"
+          >
+            Add Resource
+          </Button>
         </div>
       </form>
       {/* {errors
