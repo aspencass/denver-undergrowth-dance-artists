@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :favorites
+  resources :resources
   resources :user_resources, only: [:index, :show]
   resources :resources, only: [:index, :show, :create, :update, :destroy]
   resources :categories, only: [:index, :show, :create]

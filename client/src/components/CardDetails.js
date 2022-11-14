@@ -43,20 +43,18 @@ function CardDetails() {
                 {resource.description}
                 <br />
                 <strong>Location: </strong>
-                {resource.location_name}, {resource.address}, {resource.city},{" "}
-                {resource.state}, {resource.zip}
+                {resource.location_name}, {resource.address}
                 <br />
                 <strong>Contact: </strong>
-                {resource.contact.name}, email: {resource.contact.email}, phone:{" "}
-                {resource.contact.phone}
+                {resource.email}
                 <br />
               </div>
 
               <div className="w-full">
                 <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                   <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center pt-10">
-                    <SocialIcon url={resource.contact.website} />
-                    <SocialIcon url={resource.contact.social} />
+                    <SocialIcon url={resource.website} />
+                    <SocialIcon url={resource.social} />
                   </div>
                 </div>
               </div>

@@ -26,16 +26,7 @@ function App() {
     });
   }, []);
 
-  // GET '/resources'
-  // const fetchResources = () => {
-  //   fetch("/resources").then((res) => {
-  //     if (res.ok) {
-  //       res.json().then(setResources);
-  //     } else {
-  //       res.json().then((data) => setErrors(data.error));
-  //     }
-  //   });
-  // };
+
 
   useEffect(()=> {
     fetch('/resources')
@@ -44,8 +35,6 @@ function App() {
   }, [])
 
   const addResource = (resource) => setResources(current => [...current,resource])
-  const addContact = () => setResources(current => [...current,resources.contact])
-  const addCategory = () => setResources(current => [...current,resources.category])
 
   console.log(currentUser);
 
@@ -69,7 +58,7 @@ function App() {
           </Route>
 
         <Route  path='/resources/new'>
-          <ResourceForm addResource={addResource} addContact={addContact} addCategory={addCategory}/>
+          <ResourceForm addResource={addResource}/>
         </Route>
 
           <Route path="/users/:id">
