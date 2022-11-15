@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Label, TextInput, Button } from "flowbite-react";
+import React, { useState, useEffect } from "react";
+import { Label, TextInput, Button, Dropdown } from "flowbite-react";
 
 function ResourceForm({ addResource }) {
   // resource form data
@@ -18,6 +18,31 @@ function ResourceForm({ addResource }) {
 
   //   errors
   const [errors, setErrors] = useState([]);
+
+  // state set for categories
+  const [categories, setCategories] = useState([]);
+
+  // function firstCategory({categories}) {
+  //   const cname = categories.name;
+  //   if (categories.id === 1) {
+  //     return cname;
+  //   } elsif (categories.id === 2) {
+  //     return cname;
+  //   } elsif (categories.id === 3) {
+  //     return cname;
+  //   } else if (categories.id === 4) {
+  //     return cname;
+  //   } else if (categories.id === 5) {
+  //     return cname;
+  //   } else if (categories.id === 6) {
+  //     return cname;
+  //   } else if (categories.id === 7) {
+  //     return cname;
+  //   } else if (categories.id === 8) {
+  //     return cname;
+  //   } else (categories.id === 9) {
+  //     return cname;
+  //   }
 
   //   resource post
   const handleChange = (e) => {
@@ -46,6 +71,12 @@ function ResourceForm({ addResource }) {
     });
   }
 
+  // categories fetch
+  useEffect(() => {
+    fetch("/categories")
+      .then((res) => res.json())
+      .then((data) => setCategories(data));
+  }, []);
 
   return (
     <div className="gap-6 flex flex-col items-center bg-[url('./assets/nude.png')] bg-cover h-max w-screen pb-48">
@@ -54,6 +85,13 @@ function ResourceForm({ addResource }) {
         rehearsal space, <br />
         Denver Dance Resource here!
       </h1>
+
+    
+      {/* <Dropdown label="Resource Type" dismissOnClick={false}>
+        <div>
+          <h1>{categories[0].name}</h1>
+        </div>
+      </Dropdown> */}
 
       {/* resource submit form  */}
       {errors ? errors.map((e) => <div>{e}</div>) : null}
@@ -163,7 +201,6 @@ function ResourceForm({ addResource }) {
         >
           Add Resource
         </Button>
-
       </form>
 
       {errors

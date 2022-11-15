@@ -6,9 +6,9 @@ import Home from "./components/Home";
 import Navigation from "./components/Navigation";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
-import ResourcePage from "./components/ResourcePage"
-import CardDetails from './components/CardDetails'
-import ResourceForm from './components/ResourceForm'
+import ResourcePage from "./components/ResourcePage";
+import CardDetails from "./components/CardDetails";
+import ResourceForm from "./components/ResourceForm";
 // import UserPage from "./components/UserPage";
 
 function App() {
@@ -26,15 +26,15 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    fetch("/resources")
+      .then((res) => res.json())
+      .then((resourcesArray) => setResources(resourcesArray));
+  }, []);
 
 
-  useEffect(()=> {
-    fetch('/resources')
-    .then(res => res.json())
-    .then(resourcesArray => setResources(resourcesArray))
-  }, [])
-
-  const addResource = (resource) => setResources(current => [...current,resource])
+  const addResource = (resource) =>
+    setResources((current) => [...current, resource]);
 
   console.log(currentUser);
 
@@ -57,9 +57,9 @@ function App() {
             <SignUp />
           </Route>
 
-        <Route  path='/resources/new'>
-          <ResourceForm addResource={addResource}/>
-        </Route>
+          <Route path="/resources/new">
+            <ResourceForm addResource={addResource}/>
+          </Route>
 
           <Route path="/users/:id">
             <Home />
@@ -80,7 +80,6 @@ function App() {
           <Route exact path="/resources">
             <ResourcePage resources={resources} />
           </Route>
-
         </Switch>
       </BrowserRouter>
     </>

@@ -7,7 +7,7 @@ function ResourceCard({ resource }) {
     <>
       <div className="max-w-scren">
         <Card class="bg-[url('./assets/nude.png')] bg-cover p-2 rounded-lg transform transition duration-500 hover:scale-105 drop-shadow-xl border-[#fffc52] border-2 ml-20 mr-20 gap-10">
-          <h5 className="text-5xl font-bold tracking-tight text-[#fffc52] dark:text-white">
+          <h5 className="text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
             {resource.title}
           </h5>
           <p className="font-bold text-gray-900 dark:text-gray-400">
