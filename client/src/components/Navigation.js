@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Navbar, Button } from "flowbite-react";
+import Home from "./Home";
 
 function Navigation({ updateUser, currentUser }) {
   const [loginMenu, setLoginMenu] = useState(false);
@@ -13,9 +14,15 @@ function Navigation({ updateUser, currentUser }) {
     }).then((res) => {
       if (res.ok) {
         updateUser(false);
+        refreshHome();
       }
     });
   };
+
+  function refreshHome() {
+    window.location.href="/";
+  }
+
 
   return (
     <>
@@ -34,9 +41,9 @@ function Navigation({ updateUser, currentUser }) {
           </Navbar.Brand>
         </Navbar>
 
-        <div className="grid-child3 text-base text-center ">
+        <div className="grid-child3 text-base text-center">
           <div>
-            {currentUser && <button onClick={handleLogOut}>Log Out</button>}
+            {currentUser && <button onClick={handleLogOut} >Log Out</button>}
 
             {!loginMenu ? (
               <div onClick={() => setLoginMenu(!loginMenu)}>
