@@ -12,7 +12,7 @@ function Login({ updateUser }) {
 
   const { username, password } = formData;
 
-  function onSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     const user = {
       username,
@@ -42,14 +42,13 @@ function Login({ updateUser }) {
   return (
     <>
       <div className="bg-[url('./assets/nude.png')] bg-cover h-screen w-screen">
-        <form className="onSubmit={onSubmit} font-bold gap-4 flex flex-col items-center mt-0">
+        <form onSubmit={handleSubmit} className="font-bold gap-4 flex flex-col items-center mt-0">
           <div>
             <div className="mb-2 block ">
-              <Label htmlFor="username1" value="Your username" />
+              <Label value="Your username" />
             </div>
             <TextInput
-              id="username1"
-              type="username"
+              defaultValue = {username}
               placeholder="Username"
               required={true}
               onChange={handleChange}
@@ -57,11 +56,10 @@ function Login({ updateUser }) {
           </div>
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="password1" value="Your password" />
+              <Label value="Your password" />
             </div>
             <TextInput
-              id="password1"
-              type="password"
+              defaultValue = {password}
               required={true}
               onChange={handleChange}
             />

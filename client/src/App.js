@@ -9,7 +9,7 @@ import Login from "./components/Login";
 import ResourcePage from "./components/ResourcePage";
 import CardDetails from "./components/CardDetails";
 import ResourceForm from "./components/ResourceForm";
-// import UserPage from "./components/UserPage";
+import UserPage from "./components/UserPage";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(false);
@@ -62,7 +62,7 @@ function App() {
           </Route>
 
           <Route path="/users/:id">
-            <Home />
+            <UserPage />
           </Route>
 
           <Route path="/login">

@@ -86,19 +86,33 @@ function ResourceForm({ addResource }) {
         Denver Dance Resource here!
       </h1>
 
-    
-      {/* <Dropdown label="Resource Type" dismissOnClick={false}>
-        <div>
-          <h1>{categories[0].name}</h1>
-        </div>
-      </Dropdown> */}
+      <label>
+        Type of Resource: <br />
+        <select
+          name="category"
+          value={categories}
+          onChange={(e) => setCategories(e.target.value)}
+        >
+          <option >{categories[0].name}</option>
+          <option value="Workshop">{categories[1].name}</option>
+          <option value="Performance">{categories[2].name}</option>
+          <option value="Rehearsal Space">{categories[3].name}</option>
+          <option value="Funding Opportunity">{categories[4].name}</option>
+          <option value="Audition">{categories[5].name}</option>
+          <option value="Choreographic Opportunity">
+            {categories[6].name}
+          </option>
+          <option value="Jobs & Internships">{categories[7].name}</option>
+          <option value="Volunteering">{categories[8].name}</option>
+        </select>
+      </label>
 
       {/* resource submit form  */}
       {errors ? errors.map((e) => <div>{e}</div>) : null}
       <form onSubmit={onResourceSubmit}>
         <div className="font-bold gap-10 flex flex-row items-center mt-6">
           <div className="mb-2 block">
-            <Label htmlFor="title" value="Resource Heading:" />
+            <Label htmlFor="title" value="Heading:" />
           </div>
           <TextInput
             type="text"
