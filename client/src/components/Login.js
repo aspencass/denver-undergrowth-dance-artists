@@ -19,7 +19,7 @@ function Login({ updateUser }) {
       password,
     };
     // Logs in user
-    fetch(`/login`, {
+    fetch('/login', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
@@ -39,6 +39,8 @@ function Login({ updateUser }) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+  console.log(formData)
+
   return (
     <>
       <div className="bg-[url('./assets/nude.png')] bg-cover h-screen w-screen">
@@ -48,10 +50,12 @@ function Login({ updateUser }) {
               <Label value="Your username" />
             </div>
             <TextInput
-              defaultValue = {username}
-              placeholder="Username"
-              required={true}
-              onChange={handleChange}
+               id="username1"
+               type="username"
+               placeholder="Username"
+               name="username"
+               required={true}
+               onChange={handleChange}
             />
           </div>
           <div>
@@ -59,9 +63,11 @@ function Login({ updateUser }) {
               <Label value="Your password" />
             </div>
             <TextInput
-              defaultValue = {password}
-              required={true}
-              onChange={handleChange}
+                id="password1"
+                type="password"
+                name="password"
+                required={true}
+                onChange={handleChange}
             />
           </div>
           <div className="flex items-center gap-2">

@@ -19,7 +19,7 @@ function SignUp() {
       password,
     };
 
-    fetch(`/users`, {
+    fetch('/signup', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
@@ -33,15 +33,19 @@ function SignUp() {
       }
     });
   }
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
+  console.log(formData)
+
   return (
     <>
     <div className="bg-[url('./assets/nude.png')] bg-cover h-screen w-screen">
-      <form className="onSubmit={onSubmit} font-bold gap-4 flex flex-col items-center mt-0">
+      <form onSubmit={onSubmit} className="font-bold gap-4 flex flex-col items-center mt-0">
         <div>
           <div className="mb-2 block">
             <Label htmlFor="username1" value="Your username" />
@@ -50,6 +54,7 @@ function SignUp() {
             id="username1"
             type="username"
             placeholder="Username"
+            name="username"
             required={true}
             onChange={handleChange}
           />
@@ -61,6 +66,7 @@ function SignUp() {
           <TextInput
             id="password1"
             type="password"
+            name="password"
             required={true}
             onChange={handleChange}
           />
