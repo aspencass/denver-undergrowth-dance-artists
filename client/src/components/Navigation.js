@@ -41,7 +41,7 @@ function Navigation({ updateUser, currentUser }) {
           </Navbar.Brand>
         </Navbar>
 
-        <div className="grid-child3 text-base text-center">
+        <div className="grid-child3 text-base font-bold text-center hover:bg-[#fffc52] p-4">
           <div>
             {currentUser && <button onClick={handleLogOut} >Log Out</button>}
 
@@ -53,7 +53,7 @@ function Navigation({ updateUser, currentUser }) {
               <ul>
                 <li onClick={() => setLoginMenu(!loginMenu)}>
                   {" "}
-                  <Button color="dark" pill={true} size="xs">
+                  <Button color="light" pill={true} size="xs" class="pb-4">
                     X
                   </Button>
                 </li>
