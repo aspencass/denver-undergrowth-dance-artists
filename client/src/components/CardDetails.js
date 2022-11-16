@@ -22,6 +22,10 @@ function CardDetails() {
     return "Loading...";
   }
 
+  // function refreshCard() {
+  //   window.location.href=`/resources/${resource.id}`;
+  // }
+
   return (
     <>
       <div>
