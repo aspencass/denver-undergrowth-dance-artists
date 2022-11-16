@@ -13,6 +13,7 @@ function Search({ searchTerm, onSearchChange }) {
             Search Resources:
           </label>
           <input
+            className="opacity-50"
             type="text"
             id="search"
             placeholder="Type to search..."
