@@ -7,6 +7,11 @@ function CardDetails() {
   const params = useParams();
 
   useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
+  
+  useEffect(() => {
     fetch(`/resources/${params.id}`)
       .then((res) => res.json())
       .then((data) => setResource(data));
